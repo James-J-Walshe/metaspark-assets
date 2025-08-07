@@ -35,6 +35,15 @@
         <label for="company">Company</label><br>
         <input type="text" id="company" name="Company"><br><br>
 
+        <label for="purpose">Purpose<span style="color: red;">*</span></label><br>
+        <select id="purpose" name="Purpose" required>
+          <option value="" disabled selected>Select a purpose</option>
+          <option value="General Enquiries">General Enquiries</option>
+          <option value="Business or Service Enquiries">Business or Service Enquiries</option>
+          <option value="Media or Speaking Requests">Media or Speaking Requests</option>
+          <option value="Partnerships or Proposals">Partnerships or Proposals</option>
+        </select><br><br>
+
         <label for="message">Message<span style="color: red;">*</span></label><br>
         <textarea id="message" name="Message" rows="6" required></textarea><br><br>
 
@@ -58,6 +67,7 @@
   </script>
 </body>
 </html>
+
 
 <!--
   NOTE: Contact Form Email Handling
