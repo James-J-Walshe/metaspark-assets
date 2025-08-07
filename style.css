@@ -20,7 +20,7 @@ html, body {
 header {
   background-color: #E1E1E1;
   color: white;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem 0.5rem 1rem; /* reduce bottom padding */
   text-align: center;
 }
 
@@ -78,6 +78,7 @@ footer {
 
 h1, h2, h3 {
   color: #4B538C;
+  margin-bottom: 0.5rem; /* reduce gap below h1 */
 }
 
 ul {
