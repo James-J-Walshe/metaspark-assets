@@ -7,29 +7,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <img src="assets/logo.png" alt="Logo" class="logo">
-  <h1>James Walshe</h1>
-  <p>Digital Transformation & Programme Leadership</p>
-</header>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="industries.html">Industries</a>
-  <a href="case-studies.html">Case Studies</a>
-  <a href="insights.html">Insights</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-<div class="container">
-  <h2>Insights</h2>
-  <p>Coming soon: Thought leadership on CRM, energy sector digitisation, and enterprise programme delivery.</p>
-</div>
-
-<footer>
-  <p>© 2025 James Walshe | All rights reserved</p>
-</footer>
+  <div id="page">
+    <div id="header"></div>
+    <main class="content">
+      <div class="container">
+        <h2>Insights</h2>
+        <p>Coming soon: Thought leadership on CRM, energy sector digitisation, and enterprise programme delivery.</p>
+      </div>
+    </main>
+    <div id="footer"></div>
+  </div>
+  <script>
+    async function loadComponent(id, file) {
+      const res = await fetch(file);
+      const text = await res.text();
+      document.getElementById(id).innerHTML = text;
+    }
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
+  </script>
 </body>
 </html>
