@@ -149,3 +149,63 @@ ul {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
+/* formatting for services page card view */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background-color: white;
+  padding: 1.5rem;
+  border: 1px solid #A4A8C4;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 260px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h3 {
+  margin-top: 0;
+  color: #4B538C;
+  font-size: 1.2rem;
+}
+
+.service-card p {
+  flex-grow: 1;
+  margin: 1rem 0;
+  color: #1C110A;
+  font-size: 0.95rem;
+}
+
+.service-card a {
+  font-weight: 600;
+  color: #4B538C;
+  text-decoration: none;
+  align-self: start;
+  transition: color 0.3s ease;
+}
+
+.service-card a:hover {
+  color: #ED4D6E;
+  text-decoration: underline;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive tweak: ensure even layout on narrower screens */
+@media (max-width: 600px) {
+  .service-card {
+    min-height: auto;
+  }
+}
