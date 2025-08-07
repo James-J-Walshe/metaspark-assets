@@ -3,34 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact — James Walshe</title>
+  <title>Contact Us — James Walshe</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header>
-  <img src="assets/logo.png" alt="Logo" class="logo">
-  <h1>James Walshe</h1>
-  <p>Digital Transformation & Programme Leadership</p>
-</header>
+  <div id="header"></div>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="industries.html">Industries</a>
-  <a href="case-studies.html">Case Studies</a>
-  <a href="insights.html">Insights</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <main class="content">
+    <h2>Contact Us</h2>
 
-<div class="container">
-  <h2>Contact</h2>
-  <p>Connect with James via LinkedIn:</p>
-  <p><a href="https://www.linkedin.com/in/jamesjwalshe/" target="_blank">https://www.linkedin.com/in/jamesjwalshe/</a></p>
-</div>
+    <p>If you're ready to discuss your transformation goals or simply want to reach out, use the form below or contact us directly.</p>
 
-<footer>
-  <p>© 2025 James Walshe | All rights reserved</p>
-</footer>
+    <section class="contact-details">
+      <p><strong>Email:</strong> <a href="mailto:hello@metaspark.com.au">hello@metaspark.com.au</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+61449837730">+61 (0)4 4983 7730</a></p>
+    </section>
+
+    <section class="contact-purpose">
+      <h3>How can we help?</h3>
+      <ul>
+        <li><a href="#form">General Enquiries</a></li>
+        <li><a href="#form">Business or Service Enquiries</a></li>
+        <li><a href="#form">Media or Speaking Requests</a></li>
+        <li><a href="#form">Partnerships or Proposals</a></li>
+      </ul>
+    </section>
+
+    <section class="contact-form" id="form">
+      <h3>Contact Form</h3>
+      <form action="mailto:james.j.walshe@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name<span style="color: red;">*</span></label><br>
+        <input type="text" id="name" name="Name" required><br><br>
+
+        <label for="email">Email<span style="color: red;">*</span></label><br>
+        <input type="email" id="email" name="Email" required><br><br>
+
+        <label for="phone">Phone</label><br>
+        <input type="tel" id="phone" name="Phone"><br><br>
+
+        <label for="company">Company</label><br>
+        <input type="text" id="company" name="Company"><br><br>
+
+        <label for="message">Message<span style="color: red;">*</span></label><br>
+        <textarea id="message" name="Message" rows="6" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">* Required fields</p>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadComponent(id, file) {
+      const res = await fetch(file);
+      const text = await res.text();
+      document.getElementById(id).innerHTML = text;
+    }
+
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
+  </script>
 </body>
 </html>
+
+<!--
+  NOTE: Contact Form Email Handling
+
+  This form currently uses the basic `mailto:` action:
+    action="mailto:james.j.walshe@gmail.com" method="post" enctype="text/plain"
+
+  - This triggers the user's default email client and does not support form validation, file uploads, or success/error messages.
+  - Not reliable for professional use or wide audience deployment.
+
+  RECOMMENDED UPGRADE:
+  For a production-ready form, integrate with a backend service like:
+    - Formspree (https://formspree.io/)
+    - Netlify Forms (https://docs.netlify.com/forms/setup/)
+    - Serverless function (e.g., AWS Lambda, Firebase, or custom backend)
+
+  These allow:
+    - Email routing without user client
+    - Success/error confirmations
+    - Spam filtering and bot protection
+    - Integration with CRMs or workflow tools
+
+  To upgrade, remove `mailto:` and use a POST action to the desired backend.
+-->
