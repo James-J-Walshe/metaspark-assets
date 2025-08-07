@@ -6,32 +6,34 @@
   <title>James Walshe — Digital Transformation Consulting</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div id="page">
+    <!-- Dynamic Header -->
+    <div id="header"></div>
 
-<header>
-  <img src="assets/logo.png" alt="Logo" class="logo">
-  <h1>James Walshe</h1>
-  <p>Digital Transformation & Programme Leadership</p>
-</header>
+    <!-- Page Content -->
+    <main class="content">
+      <div class="container">
+        <h2>Transforming Operations. Empowering Customers. Delivering Results.</h2>
+        <p>James Walshe provides executive-level consulting to help organisations lead digital transformation across operations, billing, and customer service. With expertise in Salesforce CRM, SAP, and energy sector platforms, James enables service excellence and sustainable value.</p>
+      </div>
+    </main>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="industries.html">Industries</a>
-  <a href="case-studies.html">Case Studies</a>
-  <a href="insights.html">Insights</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <!-- Dynamic Footer -->
+    <div id="footer"></div>
+  </div>
 
-<div class="container">
-  <h2>Transforming Operations. Empowering Customers. Delivering Results.</h2>
-  <p>James Walshe provides executive-level consulting to help organisations lead digital transformation across operations, billing, and customer service. With expertise in Salesforce CRM, SAP, and energy sector platforms, James enables service excellence and sustainable value.</p>
-</div>
+  <!-- Load reusable header and footer -->
+  <script>
+    async function loadComponent(id, file) {
+      const res = await fetch(file);
+      const text = await res.text();
+      document.getElementById(id).innerHTML = text;
+    }
 
-<footer>
-  <p>© 2025 James Walshe | All rights reserved</p>
-</footer>
-
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
+  </script>
 </body>
 </html>
