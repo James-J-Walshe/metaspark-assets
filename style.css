@@ -64,8 +64,10 @@ footer {
 }
 
 .logo {
-  width: 120px;
-  margin-bottom: 1rem;
+  display: block;
+  width: 50vw;
+  height: auto;
+  margin: 0 auto 1rem auto;
   transition: transform 0.3s ease;
 }
 
