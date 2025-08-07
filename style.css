@@ -27,9 +27,10 @@ header {
 nav {
   background-color: #A4A8C4;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly; /* evenly distribute links */
+  align-items: center;
   padding: 1rem 0;
-  gap: 2rem;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
 }
 
 nav a {
