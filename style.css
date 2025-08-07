@@ -111,6 +111,15 @@ ul {
   color: #1C110A;
 }
 
+/* Responsive form fields on small screens */
+@media (max-width: 768px) {
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    width: 100%;
+  }
+}
+
 .contact-form button {
   padding: 0.7rem 1.5rem;
   background-color: #4B538C;
