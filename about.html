@@ -8,29 +8,33 @@
 </head>
 
 <body>
-  <div id="header"></div>
+  <div id="page">
+    <!-- Header will be loaded here -->
+    <div id="header"></div>
 
-<!-- Start of Page Content --> 
-  <main class="content">
-      <h2>About</h2>
-      <p><strong>James Walshe — Digital Transformation & Programme Leader</strong></p>
-      <p>Based in Brisbane, James Walshe brings over 15 years of experience delivering large-scale enterprise change programs across government, utilities, and industry sectors.</p>
-  </main>
-  
-<!-- End of Page Content -->  
-  
+    <!-- Page content -->
+    <main class="content">
+      <div class="container">
+        <h2>About</h2>
+        <p><strong>James Walshe — Digital Transformation & Programme Leader</strong></p>
+        <p>Based in Brisbane, James Walshe brings over 15 years of experience delivering large-scale enterprise change programs across government, utilities, and industry sectors.</p>
+      </div>
+    </main>
+
+    <!-- Footer will be loaded here -->
     <div id="footer"></div>
-  
-    <script>
-      async function loadComponent(id, file) {
-        const res = await fetch(file);
-        const text = await res.text();
-        document.getElementById(id).innerHTML = text;
-      }
-  
-      loadComponent("header", "header.html");
-      loadComponent("footer", "footer.html");
-    </script>
+  </div>
 
+  <!-- Dynamic load of header and footer -->
+  <script>
+    async function loadComponent(id, file) {
+      const res = await fetch(file);
+      const text = await res.text();
+      document.getElementById(id).innerHTML = text;
+    }
+
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
+  </script>
 </body>
 </html>
