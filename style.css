@@ -47,12 +47,24 @@ h1, h2, h3 {
   color: #4B538C;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto; /* allow it to grow and push footer down */
+}
+
 footer {
+  flex-shrink: 0;
+  padding: 1rem;
   background-color: #4B538C;
   color: white;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
 }
 
 .logo {
