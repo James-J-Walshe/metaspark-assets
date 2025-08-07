@@ -9,27 +9,49 @@
 <body>
   <div id="page">
     <div id="header"></div>
+
     <main class="content">
       <div class="container">
         <h2>Services</h2>
-        <h3>Programme & Project Leadership</h3>
-        <p>Strategic and hands-on leadership of complex change programs. From inception through delivery, James ensures alignment, structure, and accountability at every stage.</p>
-        <h3>CRM & Billing Transformation</h3>
-        <p>Deep expertise in Salesforce CRM and SAP, including Energy & Utilities Cloud and meter-to-cash processes. Guiding organisations through system implementation, process improvement, and customer experience uplift.</p>
-        <h3>Business Process Optimisation</h3>
-        <p>Helping organisations define and refine core processes to support digital enablement, improve service reliability, and reduce inefficiencies.</p>
-        <h3>Change Enablement</h3>
-        <p>Ensuring business readiness and technology adoption through effective communications, training, and leadership alignment.</p>
+
+        <div class="service-grid">
+          <div class="service-card">
+            <h3>Programme & Project Leadership</h3>
+            <p>Strategic and hands-on leadership of complex change programs. James ensures alignment, structure, and accountability at every stage.</p>
+            <a href="programme-leadership.html">Find out more →</a>
+          </div>
+
+          <div class="service-card">
+            <h3>CRM & Billing Transformation</h3>
+            <p>Expertise in Salesforce CRM and SAP, guiding implementation, process improvement, and customer experience uplift in energy sectors.</p>
+            <a href="crm-billing.html">Find out more →</a>
+          </div>
+
+          <div class="service-card">
+            <h3>Business Process Optimisation</h3>
+            <p>Defining and refining processes to improve reliability, reduce inefficiencies, and enable digital transformation across enterprises.</p>
+            <a href="process-optimisation.html">Find out more →</a>
+          </div>
+
+          <div class="service-card">
+            <h3>Change Enablement</h3>
+            <p>Ensuring readiness and adoption through communication, training, and leadership alignment throughout the program lifecycle.</p>
+            <a href="change-enablement.html">Find out more →</a>
+          </div>
+        </div>
       </div>
     </main>
+
     <div id="footer"></div>
   </div>
+
   <script>
     async function loadComponent(id, file) {
       const res = await fetch(file);
       const text = await res.text();
       document.getElementById(id).innerHTML = text;
     }
+
     loadComponent("header", "header.html");
     loadComponent("footer", "footer.html");
   </script>
