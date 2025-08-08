@@ -17,52 +17,62 @@ html, body {
   flex-direction: column;
 }
 
-/* Gentrack-inspired header styling */
+/* Header container for logo + nav in one row */
 header {
-  background-color: #1C110A; /* Deep background */
-  padding: 1rem 0;
-  text-align: center;
+  background-color: #1C110A;
+  padding: 0.5rem 2rem;
 }
 
-header .logo {
-  max-height: 60px;
-  width: auto;
-  display: block;
+.header-container {
+  display: flex;
+  align-items: center; /* align logo and nav along horizontal axis */
+  justify-content: space-between;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-header h1 {
-  color: #E1E1E1;
-  font-size: 1.8rem;
-  margin: 0.5rem 0;
+/* Logo styling */
+header .logo {
+  max-height: 50px;
+  width: auto;
+  margin: 0;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-/* Gentrack-inspired nav styling */
+header .logo:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation next to logo */
 nav {
-  background-color: #4B538C;
+  background-color: transparent;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 0.75rem 1rem;
-  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 nav a {
   color: #E1E1E1;
   text-decoration: none;
   font-weight: 600;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease, background 0.3s ease;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
   color: #ED4D6E;
 }
 
-@media (max-width: 600px) {
-  nav {
+/* Responsive: stack logo & nav vertically on small screens */
+@media (max-width: 768px) {
+  .header-container {
     flex-direction: column;
-    gap: 0.5rem;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }
 
@@ -88,7 +98,7 @@ footer {
 
 h1, h2, h3 {
   color: #4B538C;
-  margin-bottom: 0.5rem; /* reduce gap below headings */
+  margin-bottom: 0.5rem; /* reduce gap below h1 */
 }
 
 ul {
@@ -146,6 +156,13 @@ ul {
   background-color: #ED4D6E;
 }
 
+/* formatting for drop down field on contact us page */
+.contact-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 /* formatting for services page card view */
 .service-grid {
   display: grid;
@@ -198,6 +215,7 @@ ul {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* Responsive tweak: ensure even layout on narrower screens */
 @media (max-width: 600px) {
   .service-card {
     min-height: auto;
