@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
   <!-- SEO Title & Description -->
-  <title>MetaSpark | Digital Transformation Consulting in Brisbane</title>
-  <meta name="description" content="MetaSpark delivers expert digital transformation leadership in Brisbane, specialising in Enterprise systems such as Salesforce CRM, SAP, and meter-to-cash solutions with proven case results.">
+  <title>James Walshe | Digital Transformation Consulting in Brisbane</title>
+  <meta name="description" content="James Walshe delivers expert digital transformation leadership in Brisbane, specialising in Salesforce CRM, SAP, and meter-to-cash solutions with proven case results.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://james-j-walshe.github.io/metaspark-assets/index.html">
 
@@ -45,4 +45,50 @@
             <div class="service-card">
               <h3>Business Process Optimisation</h3>
               <p>Streamlining processes to reduce inefficiencies, enhance reliability, and enable digital transformation success.</p>
-              <a href="services
+              <a href="services-business-optimisation.html">Find out more →</a>
+            </div>
+            <div class="service-card">
+              <h3>Change Enablement</h3>
+              <p>Driving adoption and readiness through tailored training, communication, and leadership alignment strategies.</p>
+              <a href="services-change-enablement.html">Find out more →</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section>
+          <h2>Case Studies</h2>
+          <p>Explore real-world examples of transformation programmes led by James Walshe.</p>
+          <ul>
+            <li><a href="case-study-energy-crm.html">Energy Utility CRM Transformation</a></li>
+            <li><a href="case-study-sap-billing.html">SAP Billing Process Modernisation</a></li>
+          </ul>
+        </section>
+
+        <!-- CTA Section -->
+        <section>
+          <h2>Get in Touch</h2>
+          <p>Start a conversation about your transformation journey today.</p>
+          <a href="contact.html" class="cta-button">Contact James</a>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Dynamic Footer -->
+    <div id="footer"></div>
+  </div>
+
+  <!-- Load reusable header and footer -->
+  <script>
+    async function loadComponent(id, file) {
+      const res = await fetch(file);
+      const text = await res.text();
+      document.getElementById(id).innerHTML = text;
+    }
+
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
+  </script>
+</body>
+</html>
