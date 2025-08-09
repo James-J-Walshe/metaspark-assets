@@ -221,3 +221,69 @@ ul {
     min-height: auto;
   }
 }
+
+/* Carousel functionality */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-card {
+  flex: 0 0 300px;
+  margin: 0 10px;
+  background-color: white;
+  border: 1px solid #A4A8C4;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.carousel-card img {
+  width: 100%;
+  border-bottom: 1px solid #A4A8C4;
+}
+
+.carousel-card h3 {
+  margin: 0.5rem 0;
+  color: #4B538C;
+}
+
+.carousel-card p {
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+
+.carousel-card a {
+  display: inline-block;
+  margin: 0.5rem 0 1rem;
+  color: #4B538C;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.carousel-card a:hover {
+  color: #ED4D6E;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(75, 83, 140, 0.8);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-btn.prev { left: 5px; }
+.carousel-btn.next { right: 5px; }
+.carousel-btn:hover { background-color: #ED4D6E; }
