@@ -1,0 +1,20 @@
+  [
+  {
+    "title": "Energy Utility CRM Transformation",
+    "description": "Delivered end-to-end Salesforce CRM implementation, improving customer service efficiency by 35%.",
+    "image": "assets/case-energy.jpg",
+    "link": "case-study-energy-crm.html"
+  },
+  {
+    "title": "SAP Billing Process Modernisation",
+    "description": "Optimised meter-to-cash processes with SAP, reducing billing errors by 45%.",
+    "image": "assets/case-sap.jpg",
+    "link": "case-study-sap-billing.html"
+  },
+  {
+    "title": "Customer Experience Uplift",
+    "description": "Designed and implemented new service models, boosting NPS by 20 points.",
+    "image": "assets/case-cx.jpg",
+    "link": "case-study-cx.html"
+  }
+]
