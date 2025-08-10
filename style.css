@@ -300,6 +300,7 @@ ul {
   font-weight: 600;
   transition: background-color 0.3s ease;
   width: 100px; /* Button width - change this to adjust button size */
+  white-space: nowrap; /* Prevent text from wrapping to a new line */
 }
 
 /* Hover effect */
