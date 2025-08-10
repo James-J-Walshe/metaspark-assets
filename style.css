@@ -295,8 +295,8 @@ ul {
   color: white; /* Text color */
   text-align: center;
   text-decoration: none; /* Remove underline */
-  padding: 0.75rem 1.5rem; /* Vertical & horizontal padding */
-  border-radius: 10px; /* Rounded corners - adjust this to change curvature */
+  padding: 0.75rem 5rem; /* Vertical & horizontal padding */
+  border-radius: 50px; /* Rounded corners - adjust this to change curvature */
   font-weight: 600;
   transition: background-color 0.3s ease;
   width: 200px; /* Button width - change this to adjust button size */
