@@ -288,22 +288,31 @@ ul {
 .carousel-btn.next { right: 5px; }
 .carousel-btn:hover { background-color: #ED4D6E; }
 
+/* Button container styling */
+.button-group {
+  display: flex; /* Align buttons in a row */
+  justify-content: center; /* Center the group horizontally */
+  gap: 2rem; /* Space between buttons - double the normal 1rem */
+  margin-top: 2rem; /* Space above the group */
+}
+
 /* Button styling */
 .custom-btn {
-  display: inline-block;
+  display: flex; /* For perfect centering of text */
+  justify-content: center;
+  align-items: center;
   background-color: #4B538C; /* Button background color */
   color: white; /* Text color */
-  text-align: center;
   text-decoration: none; /* Remove underline */
   padding: 0.75rem 5rem; /* Vertical & horizontal padding */
   border-radius: 50px; /* Rounded corners - adjust this to change curvature */
   font-weight: 600;
   transition: background-color 0.3s ease;
-  width: 100px; /* Button width - change this to adjust button size */
-  white-space: nowrap; /* Prevent text from wrapping to a new line */
+  width: 100px; /* Button width - change to adjust button size */
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
-/* Hover effect */
+/* Button Hover effect */
 .custom-btn:hover {
   background-color: #ED4D6E; /* Optional hover color */
 }
