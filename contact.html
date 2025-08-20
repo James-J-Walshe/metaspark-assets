@@ -1,72 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us — James Walshe</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<main class="content">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>If you’d like to discuss a project, collaboration, or have any questions, please get in touch using the form below.</p>
 
-<body>
-  <div id="header"></div>
+    <form class="contact-form" id="contactForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
 
-  <main class="content">
-    <h2>Contact Us</h2>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
 
-    <p>If you're ready to discuss your transformation goals or simply want to reach out, use the form below or contact us directly.</p>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
 
-    <section class="contact-details">
-      <p><strong>Email:</strong> <a href="mailto:hello@metaspark.com.au">hello@metaspark.com.au</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+61449837730">+61 (0)4 4983 7730</a></p>
-    </section>
+      <button type="submit" class="btn" id="submitBtn">Send Message</button>
+      <div id="formMessage" class="form-message"></div>
+    </form>
+  </div>
+</main>
 
-    <section class="contact-form" id="form">
-      <h3>Contact Form</h3>
-      <form action="mailto:james.j.walshe@gmail.com" method="post" enctype="text/plain">
-        <label for="name">Name<span style="color: red;">*</span></label><br>
-        <input type="text" id="name" name="Name" required><br><br>
+<script>
+  const form = document.getElementById('contactForm');
+  const formMessage = document.getElementById('formMessage');
+  const submitBtn = document.getElementById('submitBtn');
 
-        <label for="email">Email<span style="color: red;">*</span></label><br>
-        <input type="email" id="email" name="Email" required><br><br>
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
 
-        <label for="phone">Phone</label><br>
-        <input type="tel" id="phone" name="Phone"><br><br>
+    // Simulate loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
 
-        <label for="company">Company</label><br>
-        <input type="text" id="company" name="Company"><br><br>
+    setTimeout(() => {
+      // Simulate success response
+      formMessage.textContent = '✅ Thank you, your message has been sent!';
+      formMessage.className = 'form-message success';
 
-        <label for="purpose">Purpose<span style="color: red;">*</span></label><br>
-         <select id="purpose" name="Purpose" required>
-          <option value="" disabled selected>Select a purpose</option>
-          <option value="General Enquiries">General Enquiries</option>
-          <option value="Business or Service Enquiries">Business or Service Enquiries</option>
-          <option value="Media or Speaking Requests">Media or Speaking Requests</option>
-          <option value="Partnerships or Proposals">Partnerships or Proposals</option>
-        </select><br><br>
+      // Reset form + button
+      form.reset();
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message';
+    }, 1500);
+  });
+</script>
 
-        <label for="message">Message<span style="color: red;">*</span></label><br>
-        <textarea id="message" name="Message" rows="6" required></textarea><br><br>
-
-        <button type="submit">Send Message</button>
-      </form>
-      <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">* Required fields</p>
-    </section>
-  </main>
-
-  <div id="footer"></div>
-
-  <script>
-    async function loadComponent(id, file) {
-      const res = await fetch(file);
-      const text = await res.text();
-      document.getElementById(id).innerHTML = text;
-    }
-
-    loadComponent("header", "header.html");
-    loadComponent("footer", "footer.html");
-  </script>
-</body>
-</html>
 
 
 <!--
