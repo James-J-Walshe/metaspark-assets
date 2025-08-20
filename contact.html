@@ -1,54 +1,94 @@
-<main class="content">
-  <div class="container">
-    <h2>Contact</h2>
-    <p>If you’d like to discuss a project, collaboration, or have any questions, please get in touch using the form below.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | MetaSpark</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Logo" class="logo">
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <form class="contact-form" id="contactForm">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
+  <!-- Main Content -->
+  <main class="content">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>If you’d like to discuss a project, collaboration, or have any questions, please get in touch using the form below.</p>
 
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
 
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
 
-      <button type="submit" class="btn" id="submitBtn">Send Message</button>
-      <div id="formMessage" class="form-message"></div>
-    </form>
-  </div>
-</main>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
 
-<script>
-  const form = document.getElementById('contactForm');
-  const formMessage = document.getElementById('formMessage');
-  const submitBtn = document.getElementById('submitBtn');
+        <button type="submit" class="btn" id="submitBtn">Send Message</button>
+        <div id="formMessage" class="form-message"></div>
+      </form>
+    </div>
+  </main>
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 MetaSpark. All rights reserved.</p>
+      <p>
+        <a href="https://www.linkedin.com/in/jamesjwalshe/" target="_blank">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
 
-    // Simulate loading state
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
+  <!-- Script for form handling -->
+  <script>
+    const form = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+    const submitBtn = document.getElementById('submitBtn');
 
-    setTimeout(() => {
-      // Simulate success response
-      formMessage.textContent = '✅ Thank you, your message has been sent!';
-      formMessage.className = 'form-message success';
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
 
-      // Reset form + button
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Send Message';
-    }, 1500);
-  });
-</script>
+      // Simulate loading state
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      setTimeout(() => {
+        // Simulate success response
+        formMessage.textContent = '✅ Thank you, your message has been sent!';
+        formMessage.className = 'form-message success';
+
+        // Reset form + button
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
 
 
 
