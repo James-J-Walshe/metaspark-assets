@@ -8,25 +8,25 @@
 </head>
 <body>
   <div id="page">
-    <!-- Header will be loaded here -->
     <div id="header"></div>
 
-    <!-- Page content -->
-     <section>
-          <h2>Case Studies</h2>
-          <div class="carousel-container">
-            <button class="carousel-btn prev">&#10094;</button>
-            <div class="carousel-track" id="case-study-carousel"></div>
-            <button class="carousel-btn next">&#10095;</button>
-          </div>
-        </section>
-        <script src="carousel.js"></script>
+    <main class="content">
+      <div class="container">
+        <h2>Case Studies</h2>
 
-    <!-- Footer will be loaded here -->
+        <div class="carousel-container">
+          <button class="carousel-btn prev">&#10094;</button>
+          <div class="carousel-track" id="case-study-carousel"></div>
+          <button class="carousel-btn next">&#10095;</button>
+        </div>
+      </div>
+    </main>
+
     <div id="footer"></div>
   </div>
 
-  <!-- Dynamic load of header and footer -->
+  <script src="carousel.js"></script>
+
   <script>
     async function loadComponent(id, file) {
       const res = await fetch(file);
