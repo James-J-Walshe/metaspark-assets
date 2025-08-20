@@ -316,3 +316,125 @@ ul {
 .custom-btn:hover {
   background-color: #ED4D6E; /* Optional hover color */
 }
+
+/* Contact form styles */
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #4B538C; /* primary brand color */
+  box-shadow: 0 0 0 3px rgba(75, 83, 140, 0.2);
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #4B538C; /* primary brand color */
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #3a426f;
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  background-color: #a4a8c4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Feedback messages */
+.form-message {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  display: none; /* hidden by default */
+}
+
+.form-message.success {
+  display: block;
+  background-color: #e6f9ed;
+  color: #2d6a4f;
+  border: 1px solid #95d5b2;
+}
+
+.form-message.error {
+  display: block;
+  background-color: #fdecea;
+  color: #b00020;
+  border: 1px solid #f5c2c7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.95rem;
+    padding: 0.65rem;
+  }
+
+  .btn {
+    width: 100%;   /* full width on small screens */
+    text-align: center;
+    padding: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
