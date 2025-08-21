@@ -328,11 +328,10 @@ ul {
 /* CHANGE ENABLEMENT PAGE    */
 /* ========================= */
 .hero {
-  background: linear-gradient(rgba(75,83,140,0.85), rgba(75,83,140,0.85)),
-              url('https://images.unsplash.com/photo-1529101091764-c3526daf38fe') no-repeat center/cover;
-  color: #fff;
-  padding: 6rem 0;
-  text-align: center;
+  background-image: none; /* remove background */
+  text-align: left;       /* align left like Index.html */
+  color: #1C110A;         /* ensure text is readable */
+  padding: 2rem 0;        /* top/bottom spacing */
 }
 
 .hero h1 {
