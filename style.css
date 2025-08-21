@@ -17,7 +17,7 @@ html, body {
   flex-direction: column;
 }
 
-/* Header container for logo + nav in one row */
+/* Header */
 header {
   background-color: #1C110A;
   padding: 0.5rem 2rem;
@@ -25,13 +25,12 @@ header {
 
 .header-container {
   display: flex;
-  align-items: center; /* align logo and nav along horizontal axis */
+  align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Logo styling */
 header .logo {
   max-height: 50px;
   width: auto;
@@ -44,7 +43,6 @@ header .logo:hover {
   transform: scale(1.05);
 }
 
-/* Navigation next to logo */
 nav {
   background-color: transparent;
   display: flex;
@@ -63,7 +61,11 @@ nav a:hover {
   color: #ED4D6E;
 }
 
-/* Responsive: stack logo & nav vertically on small screens */
+nav a.active {
+  border-bottom: 2px solid #ED4D6E;
+}
+
+/* Responsive Header */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
@@ -76,6 +78,7 @@ nav a:hover {
   }
 }
 
+/* Container */
 .container {
   max-width: 1000px;
   margin: auto;
@@ -88,6 +91,7 @@ nav a:hover {
   flex: 1 0 auto;
 }
 
+/* Footer */
 footer {
   flex-shrink: 0;
   padding: 1rem;
@@ -98,13 +102,16 @@ footer {
 
 h1, h2, h3 {
   color: #4B538C;
-  margin-bottom: 0.5rem; /* reduce gap below h1 */
+  margin-bottom: 0.5rem;
 }
 
 ul {
   padding-left: 1.2rem;
 }
 
+/* ========================= */
+/* CONTACT PAGE + FORM STYLES*/
+/* ========================= */
 .contact-details p, .contact-purpose ul {
   margin: 1rem 0;
 }
@@ -119,7 +126,6 @@ ul {
   text-decoration: underline;
 }
 
-/* formatting for fields on contact form. limited to 50% width of page */
 .contact-form input,
 .contact-form textarea,
 .contact-form select {
@@ -128,12 +134,10 @@ ul {
   font-family: 'Montserrat', sans-serif;
   border: 1px solid #A4A8C4;
   border-radius: 4px;
-  box-sizing: border-box;
   background-color: white;
   color: #1C110A;
 }
 
-/* Responsive form fields on small screens */
 @media (max-width: 768px) {
   .contact-form input,
   .contact-form textarea,
@@ -156,14 +160,16 @@ ul {
   background-color: #ED4D6E;
 }
 
-/* formatting for drop down field on contact us page */
+/* Dropdown */
 .contact-form select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
-/* formatting for services page card view */
+/* ========================= */
+/* SERVICES PAGE + CARDS     */
+/* ========================= */
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -215,14 +221,15 @@ ul {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Responsive tweak: ensure even layout on narrower screens */
 @media (max-width: 600px) {
   .service-card {
     min-height: auto;
   }
 }
 
-/* Carousel functionality */
+/* ========================= */
+/* CAROUSEL                  */
+/* ========================= */
 .carousel-container {
   position: relative;
   overflow: hidden;
@@ -288,153 +295,89 @@ ul {
 .carousel-btn.next { right: 5px; }
 .carousel-btn:hover { background-color: #ED4D6E; }
 
-/* Button container styling */
+/* ========================= */
+/* BUTTONS                   */
+/* ========================= */
 .button-group {
-  display: flex; /* Align buttons in a row */
-  justify-content: center; /* Center the group horizontally */
-  gap: 2rem; /* Space between buttons - double the normal 1rem */
-  margin-top: 2rem; /* Space above the group */
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-/* Button styling */
 .custom-btn {
-  display: flex; /* For perfect centering of text */
+  display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #4B538C; /* Button background color */
-  color: white; /* Text color */
-  text-decoration: none; /* Remove underline */
-  padding: 0.75rem 5rem; /* Vertical & horizontal padding */
-  border-radius: 50px; /* Rounded corners - adjust this to change curvature */
+  background-color: #4B538C;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 5rem;
+  border-radius: 50px;
   font-weight: 600;
   transition: background-color 0.3s ease;
-  width: 100px; /* Button width - change to adjust button size */
-  white-space: nowrap; /* Prevent text wrapping */
+  width: 100px;
+  white-space: nowrap;
 }
 
-/* Button Hover effect */
 .custom-btn:hover {
-  background-color: #ED4D6E; /* Optional hover color */
+  background-color: #ED4D6E;
 }
 
-/* Contact form styles */
-.contact-form {
-  max-width: 600px;
-  margin: 2rem auto;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+/* ========================= */
+/* CHANGE ENABLEMENT PAGE    */
+/* ========================= */
+.hero {
+  background: linear-gradient(rgba(75,83,140,0.85), rgba(75,83,140,0.85)),
+              url('https://images.unsplash.com/photo-1529101091764-c3526daf38fe') no-repeat center/cover;
+  color: #fff;
+  padding: 6rem 0;
+  text-align: center;
 }
 
-.form-group {
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.framework-step {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0;
+  gap: 2rem;
+}
+
+.framework-step img {
+  width: 45%;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.framework-step div {
+  flex: 1;
+}
+
+.framework-step.reverse {
+  flex-direction: row-reverse;
+}
+
+.services-glance {
+  background: #A4A8C4;
+  padding: 3rem 1rem;
+  border-radius: 2rem 2rem 0 0;
+  text-align: center;
+}
+
+.services-glance h2 {
   margin-bottom: 1.5rem;
 }
 
-.form-group label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #333;
+.services-glance ul {
+  list-style: none;
+  padding: 0;
 }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 1rem;
-  transition: border-color 0.3s ease, box-shadow 0.2s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #4B538C; /* primary brand color */
-  box-shadow: 0 0 0 3px rgba(75, 83, 140, 0.2);
-  outline: none;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #4B538C; /* primary brand color */
-  color: #fff;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn:hover {
-  background-color: #3a426f;
-  transform: translateY(-2px);
-}
-
-.btn:disabled {
-  background-color: #a4a8c4;
-  cursor: not-allowed;
-  transform: none;
-}
-
-/* Feedback messages */
-.form-message {
-  margin-top: 1rem;
-  font-size: 0.95rem;
-  padding: 0.75rem;
-  border-radius: 6px;
-  display: none; /* hidden by default */
-}
-
-.form-message.success {
-  display: block;
-  background-color: #e6f9ed;
-  color: #2d6a4f;
-  border: 1px solid #95d5b2;
-}
-
-.form-message.error {
-  display: block;
-  background-color: #fdecea;
-  color: #b00020;
-  border: 1px solid #f5c2c7;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .contact-form {
-    padding: 1.5rem;
-    margin: 1rem;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    font-size: 0.95rem;
-    padding: 0.65rem;
-  }
-
-  .btn {
-    width: 100%;   /* full width on small screens */
-    text-align: center;
-    padding: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-form {
-    padding: 1rem;
-    margin: 0.5rem;
-  }
-
-  .form-group label {
-    font-size: 0.9rem;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    font-size: 0.9rem;
-    padding: 0.6rem;
-  }
+.services-glance li {
+  margin: 0.5rem 0;
+  font-weight: 500;
 }
