@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products | MetaSpark</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+
+<head>  
+  
 </head>
 <body>
-  <!-- Shared Header -->
-  <div id="header"></div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -46,7 +46,16 @@
     </div>
   </main>
 
-  <!-- Shared Footer -->
-  <div id="footer"></div>
+   <!-- Load reusable header and footer -->
+  <script>
+    async function loadComponent(id, file) {
+      const res = await fetch(file);
+      const text = await res.text();
+      document.getElementById(id).innerHTML = text;
+    }
+
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
+  </script>
 </body>
 </html>
