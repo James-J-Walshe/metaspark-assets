@@ -2,62 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | MetaSpark</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
-  
 <body>
-
-  <div id="page">
-  <!-- Dynamic Header -->
+  <!-- Shared Header -->
   <div id="header"></div>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
+    <div class="hero-content container">
       <h1>Our Digital Products</h1>
       <p>Explore tools, frameworks, and assets designed to accelerate delivery and improve outcomes.</p>
     </div>
   </section>
 
-  <!-- Products Grid -->
-  <main class="products-container">
-    <div class="product-card">
-      <h2>Project Cost Estimator</h2>
-      <p>A comprehensive web-based tool for creating detailed cost estimates for ICT (Information and Communication Technology) projects. This tool provides a professional, multi-tab interface for managing all aspects of project cost estimation including resources, vendors, tools, risks, and contingencies.</p>
-      <a href="https://james-j-walshe.github.io/cost_estimation/" class="btn">View Product</a>
+  <!-- Products Section -->
+  <section class="container products-section">
+    <div class="section-header">
+      <h2>Featured Tools & Assets</h2>
+      <p>Each product is designed to help teams move faster and deliver with confidence.</p>
     </div>
 
-    <div class="product-card">
-      <h2>Requirements Generator</h2>
-      <p>Turn business process diagrams into actionable user stories and requirements with this automated template.</p>
-      <a href="#" class="btn">View Product</a>
+    <div class="products-container">
+       <div class="product-card">
+        <h3>Project Cost Estimator</h2>
+        <p>A comprehensive web-based tool for creating detailed cost estimates for ICT (Information and Communication Technology) projects. This tool provides a professional, multi-tab interface for managing all aspects of project cost estimation including resources, vendors, tools, risks, and contingencies.</p>
+        <a href="https://james-j-walshe.github.io/cost_estimation/" class="btn">View Product</a>
+      </div>
+
+      <div class="product-card">
+        <h3>Requirements Generator</h3>
+        <p>Turn business process diagrams into actionable user stories and requirements with this automated template.</p>
+        <a href="#" class="btn">View Product</a>
+      </div>
+
+      <div class="product-card">
+        <h3>Test Case Builder</h3>
+        <p>Generate structured test cases directly from user stories to ensure quality and traceability.</p>
+        <a href="#" class="btn">View Product</a>
+      </div>
+
+      <div class="product-card">
+        <h3>Change Enablement Framework</h3>
+        <p>A ready-to-use framework for assessing, planning, and managing organizational change initiatives.</p>
+        <a href="#" class="btn">View Product</a>
+      </div>
     </div>
+  </section>
 
-    <div class="product-card">
-      <h2>Test Case Builder</h2>
-      <p>Generate structured test cases directly from user stories to ensure quality and traceability.</p>
-      <a href="#" class="btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <h2>Change Enablement Framework</h2>
-      <p>A ready-to-use framework for assessing, planning, and managing organizational change initiatives.</p>
-      <a href="#" class="btn">View Product</a>
-    </div>
-  </main>
-
-   <!-- Load reusable header and footer -->
-  <script>
-    async function loadComponent(id, file) {
-      const res = await fetch(file);
-      const text = await res.text();
-      document.getElementById(id).innerHTML = text;
-    }
-
-    loadComponent("header", "header.html");
-    loadComponent("footer", "footer.html");
-  </script>
+  <!-- Shared Footer -->
+  <div id="footer"></div>
 </body>
 </html>
