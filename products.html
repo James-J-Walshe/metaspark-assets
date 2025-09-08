@@ -2,24 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products | MetaSpark</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- Shared Header -->
-  <div id="header"></div>
+  <div id="page">
+    <!-- Dynamic Header -->
+    <div id="header"></div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content container">
-      <h1>Our Digital Products</h1>
-      <p>Explore tools, frameworks, and assets designed to accelerate delivery and improve outcomes.</p>
-    </div>
-  </section>
+    <!-- Page Content -->
+    <main class="content">
+      <div class="container">
+        
+        <!-- Hero Section -->
+        <section>
+          <h1>Digital Products</h1>
+          <p>Explore tools, frameworks, and assets designed to accelerate delivery and improve outcomes.</p>
+        </section>
 
-  <!-- Products Section -->
+        <!-- Products Section -->
   <section class="container products-section">
     <div class="section-header">
       <h2>Featured Tools & Assets</h2>
@@ -51,9 +54,24 @@
         <a href="#" class="btn">View Product</a>
       </div>
     </div>
-  </section>
+        
+      </div>
+    </main>
 
-  <!-- Shared Footer -->
-  <div id="footer"></div>
+    <!-- Dynamic Footer -->
+    <div id="footer"></div>
+  </div>
+
+  <!-- Load reusable header and footer -->
+  <script>
+    async function loadComponent(id, file) {
+      const res = await fetch(file);
+      const text = await res.text();
+      document.getElementById(id).innerHTML = text;
+    }
+
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
+  </script>
 </body>
 </html>
